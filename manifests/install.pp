@@ -4,7 +4,7 @@ class learning::install {
 
   # Install mutli_node module
   include learning::multi_node
-  include pe_repo::platform::ubuntu_1404_amd64
+  include pe_repo::platform::ubuntu_2004_amd64
 
   # Install pltraining-dockeragent module
   include docker
