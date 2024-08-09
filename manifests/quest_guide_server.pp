@@ -31,7 +31,7 @@ class learning::quest_guide_server {
 
   nginx::resource::location { '~ ^/~(.+?)(/.*)?$':
     ensure         => present,
-    vhost          => '_',
+    server         => '_',
     location_alias => '/home/$1/public_html$2',
     autoindex      => 'on',
   }
