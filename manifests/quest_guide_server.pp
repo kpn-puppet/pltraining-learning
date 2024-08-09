@@ -1,7 +1,7 @@
 class learning::quest_guide_server {
   
-  $proxy_port = '80'
-  $graph_port = '90'
+  $proxy_port = 80
+  $graph_port = 90
 
   include nginx
   
@@ -19,9 +19,9 @@ class learning::quest_guide_server {
     require => Class['nginx'],
   }
 
-  nginx::resource::vhost { "_":
+  nginx::resource::server { '_':
     ensure         => present,
-    listen_port    => "${proxy_port}",
+    listen_port    => $proxy_port,
     listen_options => 'default',
     www_root       => "/var/www/quest",
     require        => File["/var/www/quest"],
