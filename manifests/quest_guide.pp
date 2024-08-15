@@ -11,8 +11,6 @@ class learning::quest_guide (
   # Nodejs and npm are required for the GitBook quest guide setup
   class { '::nodejs':
     nodejs_dev_package_ensure => 'present',
-    npm_package_ensure        => 'present',
-    repo_class                => '::epel',
   }
 
   package { 'graceful-fs':
@@ -46,7 +44,7 @@ class learning::quest_guide (
   
   # This builds html from the quest guide repository
   exec { 'gitbook build':
-    command => '/usr/local/bin/gitbook install && /usr/local/bin/gitbook build',
+    command => '/usr/lib/node_modules/gitbook-cli/bin/gitbook.js install && /usr/lib/node_modules/gitbook-cli/bin/gitbook.js build',
     cwd     => $content_repo_dir,
     creates => "${content_repo_dir}/_book",
     require => [Vcsrepo[$content_repo_dir], Package['gitbook-cli']],
