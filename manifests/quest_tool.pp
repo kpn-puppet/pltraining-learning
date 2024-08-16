@@ -131,6 +131,11 @@ class learning::quest_tool (
     command  => '/bin/gem',
     provider => gem,
   }
+  -> package { 'webrick':
+    ensure   => '1.3.1',
+    command  => '/bin/gem',
+    provider => 'gem',
+  }
   -> package { 'quest':
     ensure   => '1.2.2',
     command  => '/bin/gem',
