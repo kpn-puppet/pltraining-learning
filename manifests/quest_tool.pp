@@ -132,15 +132,15 @@ class learning::quest_tool (
     provider => gem,
   }
   -> package { 'webrick':
-    ensure   => '1.3.1',
+    ensure   => '1.6.1',
     command  => '/bin/gem',
     provider => 'gem',
   }
-  -> package { 'quest':
-    ensure   => '1.2.2',
-    command  => '/bin/gem',
-    provider => gem,
-  }
+  #-> package { 'quest':
+  #  ensure   => '1.2.2',
+  #  command  => '/bin/gem',
+  #  provider => gem,
+  #}
 
   file { '/etc/systemd/system/quest.service':
     ensure  => file,
