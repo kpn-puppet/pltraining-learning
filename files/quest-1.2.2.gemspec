@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
   if s.respond_to? :add_runtime_dependency then
     s.add_runtime_dependency(%q<activesupport>.freeze, ["~> 4.2"])
     s.add_runtime_dependency(%q<serverspec>.freeze, ["~> 2.36"])
-    s.add_runtime_dependency(%q<json>.freeze, ["~> 1.7"])
+    s.add_runtime_dependency(%q<json>.freeze, ["~> 2.7.2"])
     s.add_runtime_dependency(%q<rack>.freeze, ["~> 1.6"])
     s.add_runtime_dependency(%q<gli>.freeze, ["~> 2.12"])
     s.add_runtime_dependency(%q<mono_logger>.freeze, ["~> 1.1"])
@@ -40,7 +40,7 @@ Gem::Specification.new do |s|
   else
     s.add_dependency(%q<activesupport>.freeze, ["~> 4.2"])
     s.add_dependency(%q<serverspec>.freeze, ["~> 2.36"])
-    s.add_dependency(%q<json>.freeze, ["~> 1.7"])
+    s.add_dependency(%q<json>.freeze, ["~> 2.7.2"])
     s.add_dependency(%q<rack>.freeze, ["~> 1.6"])
     s.add_dependency(%q<gli>.freeze, ["~> 2.12"])
     s.add_dependency(%q<mono_logger>.freeze, ["~> 1.1"])
