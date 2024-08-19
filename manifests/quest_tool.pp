@@ -51,6 +51,11 @@ class learning::quest_tool (
     command  => '/bin/gem',
     provider => gem,
   }
+  -> package { 'json':
+    ensure   => '2.7.2',
+    command  => '/bin/gem',
+    provider => gem,
+  }
   -> package { 'timers':
     ensure   => '4.1.2',
     command  => '/bin/gem',
@@ -136,23 +141,19 @@ class learning::quest_tool (
     command  => '/bin/gem',
     provider => 'gem',
   }
-  #-> package { 'quest':
-  #  ensure   => '1.2.2',
-  #  command  => '/bin/gem',
-  #  provider => gem,
-  #}
-
-  file { '/etc/systemd/system/quest.service':
+  -> package { 'quest':
+    ensure   => '1.2.2',
+    command  => '/bin/gem',
+    provider => gem,
+  }
+  -> file { '/etc/systemd/system/quest.service':
     ensure  => file,
     content => epp('learning/quest.service.epp', {'test_dir' => "${content_repo_dir}/tests"}),
     mode    => '0644',
   }
-
-  service { 'quest':
+  -> service { 'quest':
     provider => systemd,
     ensure   => 'running',
     enable   => true,
-    require  => File['/etc/systemd/system/quest.service'],
   }
-
 }
