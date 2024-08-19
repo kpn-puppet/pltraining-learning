@@ -146,6 +146,11 @@ class learning::quest_tool (
     command  => '/bin/gem',
     provider => gem,
   }
+  -> file { '/usr/local/share/gems/specifications/quest-1.2.2.gemspec':
+    ensure  => file,
+    source => 'puppet:///modules/learning/quest-1.2.2.gemspec',
+    mode    => '0644',
+  }  
   -> file { '/etc/systemd/system/quest.service':
     ensure  => file,
     content => epp('learning/quest.service.epp', {'test_dir' => "${content_repo_dir}/tests"}),
