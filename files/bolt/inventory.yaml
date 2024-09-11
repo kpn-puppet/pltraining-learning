@@ -1,0 +1,221 @@
+groups:
+  - name: 'node-1'
+    targets:
+      - '10.0.1.11'
+    config:
+      transport: 'ssh'
+      ssh:
+        user: 'adminuser'
+        run-as: 'root'
+        password: '#BeterInternet'
+        host-key-check: false
+        connect-timeout: 15
+  - name: 'node-2'
+    targets:
+      - '10.0.1.12'
+    config:
+      transport: 'ssh'
+      ssh:
+        user: 'adminuser'
+        run-as: 'root'
+        password: '#BeterInternet'
+        host-key-check: false
+        connect-timeout: 15
+  - name: 'node-3'
+    targets:
+      - '10.0.1.13'
+    config:
+      transport: 'ssh'
+      ssh:
+        user: 'adminuser'
+        run-as: 'root'
+        password: '#BeterInternet'
+        host-key-check: false
+        connect-timeout: 15
+  - name: 'node-4'
+    targets:
+      - '10.0.1.14'
+    config:
+      transport: 'ssh'
+      ssh:
+        user: 'adminuser'
+        run-as: 'root'
+        password: '#BeterInternet'
+        host-key-check: false
+        connect-timeout: 15        
+  - name: 'node-5'
+    targets:
+      - '10.0.1.15'
+    config:
+      transport: 'ssh'
+      ssh:
+        user: 'adminuser'
+        run-as: 'root'
+        password: '#BeterInternet'
+        host-key-check: false
+        connect-timeout: 15
+  - name: 'node-6'
+    targets:
+      - '10.0.1.16'
+    config:
+      transport: 'ssh'
+      ssh:
+        user: 'adminuser'
+        run-as: 'root'
+        password: '#BeterInternet'
+        host-key-check: false
+        connect-timeout: 15
+  - name: 'node-7'
+    targets:
+      - '10.0.1.17'
+    config:
+      transport: 'ssh'
+      ssh:
+        user: 'adminuser'
+        run-as: 'root'
+        password: '#BeterInternet'
+        host-key-check: false
+        connect-timeout: 15
+  - name: 'node-8'
+    targets:
+      - '10.0.1.18'
+    config:
+      transport: 'ssh'
+      ssh:
+        user: 'adminuser'
+        run-as: 'root'
+        password: '#BeterInternet'
+        host-key-check: false
+        connect-timeout: 15
+  - name: 'node-9'
+    targets:
+      - '10.0.1.19'
+    config:
+      transport: 'ssh'
+      ssh:
+        user: 'adminuser'
+        run-as: 'root'
+        password: '#BeterInternet'
+        host-key-check: false
+        connect-timeout: 15        
+  - name: 'node-10'
+    targets:
+      - '10.0.1.10'
+    config:
+      transport: 'ssh'
+      ssh:
+        user: 'adminuser'
+        run-as: 'root'
+        password: '#BeterInternet'
+        host-key-check: false
+        connect-timeout: 15
+  - name: 'node-11'
+    targets:
+      - '10.0.1.21'
+    config:
+      transport: 'ssh'
+      ssh:
+        user: 'adminuser'
+        run-as: 'root'
+        password: '#BeterInternet'
+        host-key-check: false
+        connect-timeout: 15
+  - name: 'node-12'
+    targets:
+      - '10.0.1.22'
+    config:
+      transport: 'ssh'
+      ssh:
+        user: 'adminuser'
+        run-as: 'root'
+        password: '#BeterInternet'
+        host-key-check: false
+        connect-timeout: 15
+  - name: 'node-13'
+    targets:
+      - '10.0.1.23'
+    config:
+      transport: 'ssh'
+      ssh:
+        user: 'adminuser'
+        run-as: 'root'
+        password: '#BeterInternet'
+        host-key-check: false
+        connect-timeout: 15
+  - name: 'node-14'
+    targets:
+      - '10.0.1.24'
+    config:
+      transport: 'ssh'
+      ssh:
+        user: 'adminuser'
+        run-as: 'root'
+        password: '#BeterInternet'
+        host-key-check: false
+        connect-timeout: 15        
+  - name: 'node-15'
+    targets:
+      - '10.0.1.25'
+    config:
+      transport: 'ssh'
+      ssh:
+        user: 'adminuser'
+        run-as: 'root'
+        password: '#BeterInternet'
+        host-key-check: false
+        connect-timeout: 15
+  - name: 'node-16'
+    targets:
+      - '10.0.1.26'
+    config:
+      transport: 'ssh'
+      ssh:
+        user: 'adminuser'
+        run-as: 'root'
+        password: '#BeterInternet'
+        host-key-check: false
+        connect-timeout: 15
+  - name: 'node-17'
+    targets:
+      - '10.0.1.27'
+    config:
+      transport: 'ssh'
+      ssh:
+        user: 'adminuser'
+        run-as: 'root'
+        password: '#BeterInternet'
+        host-key-check: false
+        connect-timeout: 15
+  - name: 'node-18'
+    targets:
+      - '10.0.1.28'
+    config:
+      transport: 'ssh'
+      ssh:
+        user: 'adminuser'
+        run-as: 'root'
+        password: '#BeterInternet'
+        host-key-check: false
+        connect-timeout: 15
+  - name: 'node-19'
+    targets:
+      - '10.0.1.29'
+    config:
+      transport: 'ssh'
+      ssh:
+        user: 'adminuser'
+        run-as: 'root'
+        password: '#BeterInternet'
+        host-key-check: false
+        connect-timeout: 15        
+  - name: 'node-20'
+    targets:
+      - '10.0.1.20'
+    config:
+      transport: 'ssh'
+      ssh:
+        user: 'adminuser'
+        run-as: 'root'
+        password: '#BeterInternet'
+        host-key-check: false
+        connect-timeout: 15
