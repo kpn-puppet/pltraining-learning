@@ -84,5 +84,34 @@ class learning::install {
     mode   => '0500',
     source => 'puppet:///modules/learning/bolt/bolt-project.yaml.yaml',
   }
-
+  $hosts = {
+    'node-1' => '10.0.1.11',
+    'node-2' => '10.0.1.12',
+    'node-3' => '10.0.1.13',
+    'node-4' => '10.0.1.14',
+    'node-5' => '10.0.1.15',
+    'node-6' => '10.0.1.16',
+    'node-7' => '10.0.1.17',
+    'node-8' => '10.0.1.18',
+    'node-9' => '10.0.1.19',
+    'node-10' => '10.0.1.10',
+    'node-11' => '10.0.1.11',
+    'node-12' => '10.0.1.12',
+    'node-13' => '10.0.1.13',
+    'node-14' => '10.0.1.14',
+    'node-15' => '10.0.1.15',
+    'node-16' => '10.0.1.16',
+    'node-17' => '10.0.1.17',
+    'node-18' => '10.0.1.18',
+    'node-19' => '10.0.1.19',
+    'node-20' => '10.0.1.20'
+  }
+  $hosts.each |$k, $v| {
+    host { $k:
+      ensure       => present,
+      host_aliases => ["${k}.internal.cloudapp.net"],
+      ip           => $v,
+      target       => '/etc/hosts'
+    }
+  }
 }
