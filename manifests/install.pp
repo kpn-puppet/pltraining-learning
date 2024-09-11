@@ -72,5 +72,17 @@ class learning::install {
     line   => 'GSSAPIAuthentication yes',
     match  => '^GSSAPIAuthentication',
   }
+  file { '/etc/puppetlabs/bolt/inventory.yaml':
+    ensure => 'file',
+    owner  => 'root',
+    mode   => '0500',
+    source => 'puppet:///modules/learning/bolt/inventory.yaml',
+  }
+  file { '/etc/puppetlabs/bolt/bolt-project.yaml':
+    ensure => 'file',
+    owner  => 'root',
+    mode   => '0500',
+    source => 'puppet:///modules/learning/bolt/bolt-project.yaml.yaml',
+  }
 
 }
