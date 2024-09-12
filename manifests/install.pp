@@ -88,7 +88,8 @@ class learning::install {
     ensure => 'file',
     owner  => 'root',
     mode   => '0500',
-    source => 'puppet:///modules/learning/bolt/bolt-project.yaml.yaml',
+    source => 'puppet:///modules/learning/bolt/bolt-project.yaml',
+    require => File['/etc/puppetlabs/bolt'],
   }
   $hosts = {
     'node-1' => '10.0.1.101',
