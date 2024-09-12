@@ -75,19 +75,22 @@ class learning::install {
   file { '/etc/puppetlabs/bolt':
     ensure => 'directory',
     owner  => 'root',
-    mode   => '0750',
+    group  => 'adminuser', 
+    mode   => '0775',
   }  
   file { '/etc/puppetlabs/bolt/inventory.yaml':
     ensure => 'file',
     owner  => 'root',
-    mode   => '0500',
+    group  => 'adminuser',
+    mode   => '0664',
     source => 'puppet:///modules/learning/bolt/inventory.yaml',
     require => File['/etc/puppetlabs/bolt'],
   }
   file { '/etc/puppetlabs/bolt/bolt-project.yaml':
     ensure => 'file',
     owner  => 'root',
-    mode   => '0500',
+    group  => 'adminuser',
+    mode   => '0664',
     source => 'puppet:///modules/learning/bolt/bolt-project.yaml',
     require => File['/etc/puppetlabs/bolt'],
   }
