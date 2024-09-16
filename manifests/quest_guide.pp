@@ -1,5 +1,5 @@
 class learning::quest_guide (
-  $git_branch = 'master',
+  $git_branch = 'rhel9',
   $content_repo_owner = 'cjswart',
   $content_repo_name  = 'puppet-quest-guide',
 ) {
