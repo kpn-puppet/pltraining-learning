@@ -6,9 +6,9 @@ class learning::install {
   include learning::multi_node
   include pe_repo::platform::ubuntu_2004_amd64
 
-  # Install pltraining-dockeragent module
-  include docker
-  include learning::dockeragent
+  # Install pltraining-dockeragent module (no longer needed on rhel9
+  #include docker
+  #include learning::dockeragent
 
   package { 'python-pip':
     ensure => 'present',
