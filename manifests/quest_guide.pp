@@ -31,7 +31,7 @@ class learning::quest_guide (
   vcsrepo { $content_repo_dir:
     ensure   => present,
     provider => git,
-    revision => $git_branch,
+    revision => 'rhel9',
     source   => "https://github.com/${content_repo_owner}/${content_repo_name}.git",
   }
   -> file { '/usr/src/puppet-quest-guide/package.json':
