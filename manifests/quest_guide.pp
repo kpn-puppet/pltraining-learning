@@ -1,5 +1,5 @@
 class learning::quest_guide (
-  $git_branch = 'rhel9',
+  $git_branch = 'main',
   $content_repo_owner = 'kpn-puppet',
   $content_repo_name  = 'puppet-quest-guide',
 ) {
@@ -31,7 +31,7 @@ class learning::quest_guide (
   vcsrepo { $content_repo_dir:
     ensure   => present,
     provider => git,
-    revision => 'rhel9',
+    revision => $git_branch,
     source   => "https://github.com/${content_repo_owner}/${content_repo_name}.git",
   }
   -> file { '/usr/src/puppet-quest-guide/package.json':
